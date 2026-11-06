@@ -1,0 +1,3 @@
+import mongoose from 'mongoose';
+const jobSchema=new mongoose.Schema({recruiterId:{type:mongoose.Schema.Types.ObjectId,ref:'User',required:true,index:true},title:{type:String,required:true,trim:true},company:{type:String,required:true,trim:true},description:{type:String,required:true},requiredSkills:[String],preferredSkills:[String],minExperience:{type:Number,default:0,min:0},maxExperience:{type:Number,default:0,min:0},qualification:{type:String,default:''},location:{type:String,default:''},employmentType:{type:String,default:'Full-time'},status:{type:String,enum:['active','closed'],default:'active'},deadline:Date},{timestamps:true});
+export default mongoose.model('Job',jobSchema);

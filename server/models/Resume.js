@@ -1,0 +1,3 @@
+import mongoose from 'mongoose';
+const resumeSchema=new mongoose.Schema({candidateId:{type:mongoose.Schema.Types.ObjectId,ref:'User',index:true},originalFilename:String,storedFilename:String,fileType:String,fileSize:Number,extractedText:{type:String,select:false},extractedInformation:{name:String,email:String,phone:String,experienceYears:Number,skills:[String],education:[String],experience:[String],projects:[String],certifications:[String]},processingStatus:{type:String,enum:['processed','failed'],default:'processed'}},{timestamps:true});
+export default mongoose.model('Resume',resumeSchema);

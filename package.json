@@ -1,0 +1,6 @@
+{
+  "name": "ai-resume-screening",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {"dev:client": "npm --prefix client run dev", "dev:server": "npm --prefix server run dev", "start:server": "npm --prefix server start", "install:all": "npm install --prefix client && npm install --prefix server"}
+}
